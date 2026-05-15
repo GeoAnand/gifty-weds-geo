@@ -215,42 +215,220 @@ export default function App() {
     );
   }
   if (!opened) {
+
     return (
-      <div className="h-screen flex flex-col items-center justify-center bg-black text-white text-center px-6">
-        <motion.h1
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-5xl font-bold mb-6"
+
+      <div className="relative h-screen overflow-hidden bg-black flex items-center justify-center px-6">
+
+        {/* floating orbs */}
+        <div className="animated-bg"></div>
+
+        <div className="floating-orbs">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* Background Glow */}
+        <div className="opening-glow"></div>
+
+        {/* Floating Lights */}
+        <div className="particles-bg"></div>
+
+        {/* Invitation Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 80, scale: .9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{
+            duration: 1.5,
+            ease: "easeOut",
+          }}
+          className="
+          relative
+          z-10
+          max-w-2xl
+          w-full
+          rounded-[40px]
+          border
+          border-[#d4af37]/20
+          bg-[#07131b]/70
+          backdrop-blur-xl
+          shadow-[0_0_60px_rgba(0,0,0,.6)]
+          px-10
+          py-20
+          text-center
+        "
         >
-          Geo & Gifty
-        </motion.h1>
 
-        <p className="text-gray-400 mb-8">
-          Together with their families invite you to celebrate their wedding
-        </p>
+          {/* Top Text */}
+          <motion.p
+            initial={{ opacity: 0, letterSpacing: "2px" }}
+            animate={{ opacity: 1, letterSpacing: "8px" }}
+            transition={{ delay: .5, duration: 1 }}
+            className="uppercase text-xs tracking-[8px] text-[#d4af37] mb-8"
+          >
+            Holy Matrimony
+          </motion.p>
 
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          onClick={() => {
-            setLoading(true);
+          {/* Names */}
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: .7, duration: 1 }}
+            className="
+            text-6xl
+            md:text-8xl
+            font-bold
+            gold-text
+            leading-tight
+          "
+          >
+            Geo
+          </motion.h1>
 
-            setTimeout(() => {
-              setLoading(false);
-              setOpened(true);
+          <div className="flex items-center justify-center gap-5 my-8">
+
+            <div className="w-24 h-[1px] bg-gradient-to-r from-transparent to-[#d4af37]"></div>
+
+            <div className="text-[#fff] text-xl">
+              ✝
+            </div>
+
+            <div className="w-24 h-[1px] bg-gradient-to-l from-transparent to-[#d4af37]"></div>
+
+          </div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: .9, duration: 1 }}
+            className="
+            text-6xl
+            md:text-8xl
+            font-bold
+            gold-text
+            leading-tight
+          "
+          >
+            Gifty
+          </motion.h1>
+
+          {/* Subtitle */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.2 }}
+            className="
+            mt-10
+            text-gray-300
+            text-lg
+            leading-8
+            max-w-xl
+            mx-auto
+          "
+          >
+            Together we and our families invite you to celebrate
+            our wedding ceremony with love, joy and blessings.
+          </motion.p>
+
+          {/* Date */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.4 }}
+            className="
+            mt-10
+            text-[#d4af37]
+            tracking-[6px]
+            uppercase
+            text-sm
+          "
+          >
+            25 • June • 2026
+          </motion.p>
+
+          {/* Open Button */}
+          <motion.button
+
+            initial={{ opacity: 0, y: 30 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+
+            transition={{
+              delay: 1.5,
+              duration: 1,
+            }}
+
+            whileHover={{
+              scale: 1.06,
+              boxShadow: "0 0 40px rgba(212,175,55,.45)",
+            }}
+
+            whileTap={{
+              scale: .96,
+            }}
+
+            onClick={() => {
+
+              setLoading(true);
 
               setTimeout(() => {
-                if (audioRef.current) {
-                  audioRef.current.play();
-                }
-              }, 500);
-            }, 3000);
-          }}
 
-          className="px-8 py-4 rounded-full bg-white text-black"
-        >
-          Open Invitation
-        </motion.button>
+                setLoading(false);
+                setOpened(true);
+
+                setTimeout(() => {
+
+                  if (audioRef.current) {
+                    audioRef.current.play();
+                  }
+
+                }, 300);
+
+              }, 3000);
+
+            }}
+
+            className="
+    relative
+    overflow-hidden
+    mt-14
+    px-14
+    py-5
+    rounded-full
+    text-lg
+    font-semibold
+    tracking-[3px]
+    uppercase
+    border
+    border-[#d4af37]/30
+    bg-[#0b1620]/70
+    text-[#f8e7b0]
+    backdrop-blur-xl
+    transition-all
+    duration-500
+  "
+          >
+
+            {/* Animated Shine */}
+            <span className="shine"></span>
+
+            {/* Glow Pulse */}
+            <span className="button-glow"></span>
+
+            <span className="relative z-10">
+              Open Invitation
+            </span>
+
+          </motion.button>
+
+        </motion.div>
+
       </div>
+
     );
   }
 
@@ -259,26 +437,26 @@ export default function App() {
 
       {/* Music */}
       <audio
-  ref={audioRef}
-  loop
-  src="/bg-music.mp3"
-/>
+        ref={audioRef}
+        loop
+        src="/bg-music.mp3"
+      />
 
-<button
-  onClick={() => {
+      <button
+        onClick={() => {
 
-    if (!audioRef.current) return;
+          if (!audioRef.current) return;
 
-    if (isMuted) {
-      audioRef.current.muted = false;
-      audioRef.current.play();
-    } else {
-      audioRef.current.muted = true;
-    }
+          if (isMuted) {
+            audioRef.current.muted = false;
+            audioRef.current.play();
+          } else {
+            audioRef.current.muted = true;
+          }
 
-    setIsMuted(!isMuted);
-  }}
-  className="
+          setIsMuted(!isMuted);
+        }}
+        className="
     fixed
     top-4
     right-4
@@ -301,13 +479,13 @@ export default function App() {
     hover:shadow-[0_0_20px_rgba(212,175,55,.25)]
     music-glow
   "
->
-  {isMuted ? (
-    <VolumeX size={22} />
-  ) : (
-    <Volume2 size={22} />
-  )}
-</button>
+      >
+        {isMuted ? (
+          <VolumeX size={22} />
+        ) : (
+          <Volume2 size={22} />
+        )}
+      </button>
 
       {/* Hero */}
       <section className="hero-section h-screen flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
@@ -389,7 +567,7 @@ export default function App() {
         </div>
 
       </section>
- 
+
       {/* Story */}
       {/* <section className="py-24 px-6 max-w-4xl mx-auto text-center">
         <motion.h2
@@ -407,14 +585,14 @@ export default function App() {
 
 
       {/* Wedding Timeline */}
-      <WeddingTimeline/>
+      <WeddingTimeline />
 
 
       {/*Wedding Venue */}
-      <WeddingVenue/>
+      <WeddingVenue />
 
       {/* Reception Venue */}
-      <ReceptionVenue/>
+      <ReceptionVenue />
 
       {/* RSVP */}
       <section className="section-padding px-6 text-center">
