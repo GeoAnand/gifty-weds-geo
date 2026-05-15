@@ -219,7 +219,16 @@ export default function App() {
 
     return (
 
-      <div className="relative h-screen overflow-hidden  flex items-center justify-center px-6">
+      <div className="
+  relative
+  min-h-[100svh]
+  overflow-hidden
+  flex
+  items-center
+  justify-center
+  px-5
+  py-6
+">
 
         {/* floating orbs */}
         <div className="animated-bg"></div>
@@ -248,7 +257,7 @@ export default function App() {
           className="
           relative
           z-10
-          max-w-2xl
+          max-w-2xl overflow-hidden
           w-full
           rounded-[40px]
           border
@@ -256,8 +265,8 @@ export default function App() {
           bg-[#07131b]/70
           backdrop-blur-xl
           shadow-[0_0_60px_rgba(0,0,0,.6)]
-          px-10
-          py-20
+          px-6 md:px-8
+          py-8 md:py-14
           text-center
         "
         >
@@ -288,7 +297,7 @@ export default function App() {
             Gifty
           </motion.h1>
 
-          <div className="flex items-center justify-center gap-5 my-8">
+          <div className="flex items-center justify-center gap-5 my-6">
 
             <div className="w-24 h-[1px] bg-gradient-to-r from-transparent to-[#d4af37]"></div>
 
@@ -396,7 +405,7 @@ export default function App() {
             className="
     relative
     overflow-hidden
-    mt-14
+    mt-8 md:mt-14
     px-14
     py-5
     rounded-full
@@ -434,9 +443,9 @@ export default function App() {
   }
 
   return (
-      <div className="main-background text-white overflow-hidden relative">
+    <div className="main-background text-white overflow-hidden relative">
 
-        <div className="fog"></div>
+      <div className="fog"></div>
 
       {/* Music */}
       <audio
@@ -508,7 +517,7 @@ export default function App() {
             "So they are no longer two but one flesh. What therefore God has joined together, let not man separate." <br></br><span className="white-heading right-float pt-3">— Matthew 19:6</span>
           </p>
 
-          <h1 className="text-6xl pt-4 md:text-9xl font-bold gold-text">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold gold-text">
             Gifty
           </h1>
 
@@ -517,7 +526,7 @@ export default function App() {
           </h1>
 
 
-          <h1 className="text-6xl md:text-9xl font-bold gold-text">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold gold-text">
             Geo
           </h1>
 
@@ -598,7 +607,7 @@ export default function App() {
       <ReceptionVenue />
 
       {/* Celebration */}
-      <Celebration/>
+      <Celebration />
 
       {/* Footer */}
       <footer className="py-10 text-center text-gray-500 bg-[#041116]">
