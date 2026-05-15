@@ -364,7 +364,7 @@ export default function App() {
           {/* Open Button */}
           <motion.button
 
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{
               opacity: 1,
               y: 0,
@@ -376,12 +376,12 @@ export default function App() {
             }}
 
             whileHover={{
-              scale: 1.06,
+              scale: 1.015,
               boxShadow: "0 0 40px rgba(212,175,55,.45)",
             }}
 
             whileTap={{
-              scale: .96,
+              scale: .99,
             }}
 
             onClick={() => {
@@ -401,14 +401,14 @@ export default function App() {
 
                 }, 300);
 
-              }, 3000);
+              }, 1500);
 
             }}
 
             className="
     relative
     overflow-hidden
-    mt-8 md:mt-14
+    mt-8 md:mt-8 md:mt-12
     px-14
     py-5
     rounded-full
