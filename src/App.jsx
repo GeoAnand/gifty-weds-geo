@@ -220,8 +220,9 @@ export default function App() {
     return (
 
       <div className="
+      fixed inset-0
   relative
-  min-h-[100svh]
+  h-[95svh]
   overflow-hidden
   flex
   items-center
@@ -289,7 +290,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: .7, duration: 1 }}
             className="
-            text-6xl
+            text-4xl sm:text-5xl md:text-7xl
             md:text-8xl
             font-bold
             gold-text
@@ -316,7 +317,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: .9, duration: 1 }}
             className="
-            text-6xl
+            text-4xl sm:text-5xl md:text-7xl
             md:text-8xl
             font-bold
             gold-text
