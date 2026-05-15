@@ -222,7 +222,7 @@ export default function App() {
       <div className="
       fixed inset-0
   relative
-  h-[95svh]
+  h-[100svh]
   overflow-hidden
   flex
   items-center
