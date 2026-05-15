@@ -372,3 +372,252 @@ body {
     transform: scale(1.05);
   }
 }
+
+/* MAIN BACKGROUND */
+
+.main-background {
+  position: relative;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left,
+    rgba(212,175,55,.08),
+    transparent 25%),
+
+    radial-gradient(circle at bottom right,
+    rgba(16,70,120,.12),
+    transparent 30%),
+
+    linear-gradient(
+      180deg,
+      #02070b 0%,
+      #041116 35%,
+      #02070b 100%
+    );
+
+  overflow: hidden;
+}
+
+/* MOVING LIGHT */
+
+.main-background::before {
+  content: "";
+
+  position: absolute;
+
+  width: 1200px;
+  height: 1200px;
+
+  background:
+    radial-gradient(circle,
+    rgba(212,175,55,.06),
+    transparent 70%);
+
+  top: -20%;
+  left: -10%;
+
+  animation: moveLight 20s ease-in-out infinite alternate;
+
+  pointer-events: none;
+}
+
+/* SECOND LIGHT */
+
+.main-background::after {
+  content: "";
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  background:
+    radial-gradient(circle,
+    rgba(255,255,255,.03),
+    transparent 70%);
+
+  bottom: -20%;
+  right: -10%;
+
+  animation: moveLight2 25s ease-in-out infinite alternate;
+
+  pointer-events: none;
+}
+
+/* LIGHT ANIMATION */
+
+@keyframes moveLight {
+
+  0% {
+    transform: translate(0,0) scale(1);
+  }
+
+  100% {
+    transform: translate(120px,80px) scale(1.15);
+  }
+}
+
+@keyframes moveLight2 {
+
+  0% {
+    transform: translate(0,0) scale(1);
+  }
+
+  100% {
+    transform: translate(-100px,-80px) scale(1.1);
+  }
+}
+
+/* FOG EFFECT */
+
+.fog {
+  position: absolute;
+  inset: 0;
+
+  background:
+    url("https://www.transparenttextures.com/patterns/cloudy-day.png");
+
+  opacity: .05;
+
+  animation: fogMove 60s linear infinite;
+
+  pointer-events: none;
+}
+
+@keyframes fogMove {
+
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 1000px 0;
+  }
+}
+
+.main-background .stars {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    radial-gradient(white 1px, transparent 1px);
+
+  background-size: 120px 120px;
+
+  opacity: .06;
+
+  animation: starsMove 80s linear infinite;
+}
+
+@keyframes starsMove {
+
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(200px);
+  }
+}
+
+/* backround light effects */
+.main-background {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at top left,
+    rgba(212,175,55,.12),
+    transparent 25%),
+
+    radial-gradient(circle at bottom right,
+    rgba(0,80,150,.15),
+    transparent 30%),
+
+    linear-gradient(
+      180deg,
+      #02070b 0%,
+      #07131b 45%,
+      #02070b 100%
+    );
+}
+
+/* MOVING GOLD LIGHT */
+
+.main-background::before {
+
+  content: "";
+
+  position: fixed;
+
+  width: 900px;
+  height: 900px;
+
+  top: -20%;
+  left: -10%;
+
+  background:
+    radial-gradient(circle,
+    rgba(212,175,55,.10),
+    transparent 70%);
+
+  filter: blur(80px);
+
+  animation: moveGlow 18s ease-in-out infinite alternate;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* BLUE LIGHT */
+
+.main-background::after {
+
+  content: "";
+
+  position: fixed;
+
+  width: 800px;
+  height: 800px;
+
+  bottom: -20%;
+  right: -10%;
+
+  background:
+    radial-gradient(circle,
+    rgba(0,90,160,.12),
+    transparent 70%);
+
+  filter: blur(100px);
+
+  animation: moveGlow2 22s ease-in-out infinite alternate;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+/* ANIMATIONS */
+
+@keyframes moveGlow {
+
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(120px,80px);
+  }
+}
+
+@keyframes moveGlow2 {
+
+  0% {
+    transform: translate(0,0);
+  }
+
+  100% {
+    transform: translate(-120px,-60px);
+  }
+}

@@ -5,7 +5,7 @@ export default function WeddingVenue() {
 
   return (
 
-      <section className="section-padding px-6 ">
+      <section className="section-padding px-6 relative z-10">
 
         <h2 className="text-5xl text-center gold-text mb-6">
           Wedding Venue

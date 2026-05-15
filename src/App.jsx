@@ -9,6 +9,7 @@ import Divider from "./components/Divider";
 import ReceptionVenue from "./sections/ReceptionVenue";
 import WeddingVenue from "./sections/WeddingVenue";
 import WeddingTimeline from "./sections/WeddingTimeline";
+import Celebration from "./sections/Celebration";
 
 
 
@@ -199,7 +200,7 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="h-screen bg-black flex flex-col items-center justify-center">
+      <div className="h-screen  flex flex-col items-center justify-center">
 
         <BarLoader />
 
@@ -218,7 +219,7 @@ export default function App() {
 
     return (
 
-      <div className="relative h-screen overflow-hidden bg-black flex items-center justify-center px-6">
+      <div className="relative h-screen overflow-hidden  flex items-center justify-center px-6">
 
         {/* floating orbs */}
         <div className="animated-bg"></div>
@@ -268,7 +269,7 @@ export default function App() {
             transition={{ delay: .5, duration: 1 }}
             className="uppercase text-xs tracking-[8px] text-[#d4af37] mb-8"
           >
-            Holy Matrimony
+            New Beginings Together
           </motion.p>
 
           {/* Names */}
@@ -284,7 +285,7 @@ export default function App() {
             leading-tight
           "
           >
-            Geo
+            Gifty
           </motion.h1>
 
           <div className="flex items-center justify-center gap-5 my-8">
@@ -311,7 +312,7 @@ export default function App() {
             leading-tight
           "
           >
-            Gifty
+            Geo
           </motion.h1>
 
           {/* Subtitle */}
@@ -433,7 +434,9 @@ export default function App() {
   }
 
   return (
-    <div className="bg-black text-white overflow-hidden">
+      <div className="main-background text-white overflow-hidden relative">
+
+        <div className="fog"></div>
 
       {/* Music */}
       <audio
@@ -509,7 +512,7 @@ export default function App() {
             Gifty
           </h1>
 
-          <h1 className="text-6xl mt-2 md:text-8xl font-bold white-heading">
+          <h1 className="text-6xl mt-2 md:text-7xl font-bold white-heading">
             &
           </h1>
 
@@ -534,7 +537,7 @@ export default function App() {
       </section>
 
       {/* Countdown */}
-      <section className="section-padding text-center px-6">
+      <section className="section-padding text-center px-6 relative z-10">
 
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
@@ -594,32 +597,12 @@ export default function App() {
       {/* Reception Venue */}
       <ReceptionVenue />
 
-      {/* RSVP */}
-      <section className="section-padding px-6 text-center">
-
-        <h2 className="text-5xl gold-text mb-6">
-          Join Our Celebration
-        </h2>
-
-        <div className="divider"></div>
-
-        <p className="text-gray-300 mt-8 text-lg">
-          Your presence is the greatest blessing to us.
-        </p>
-
-        <a
-          href="https://wa.me/919025342877"
-          target="_blank"
-          className="luxury-btn inline-block mt-10 px-10 py-5 rounded-full text-lg font-semibold"
-        >
-          RSVP On WhatsApp
-        </a>
-
-      </section>
+      {/* Celebration */}
+      <Celebration/>
 
       {/* Footer */}
-      <footer className="py-10 text-center text-gray-500">
-        Made with love for Geo & Gifty
+      <footer className="py-10 text-center text-gray-500 bg-[#041116]">
+        Made with love for Gifty & Geo
       </footer>
     </div>
   );

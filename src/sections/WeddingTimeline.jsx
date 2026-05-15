@@ -22,28 +22,18 @@ export default function WeddingTimeline() {
     
                 {[
                   {
-                    title: "Guest Arrival",
-                    time: "Jun 25, 2026 • 4:00 PM",
+                    title: "Bride's Side Reception (Edaicode)",
+                    time: "Jun 24, 2026 • 4:00 PM",
                   },
     
                   {
-                    title: "Wedding Ceremony",
-                    time: "Jun 25, 2026 • 5:00 PM",
+                    title: "Wedding Ceremony (C.S.I. Pastorate Church, Edaicode)",
+                    time: "Jun 25, 2026 • 10:00 AM",
                   },
     
                   {
-                    title: "Holy Communion",
+                    title: "Reception (CSI Kadamankuzhi - Community Hall)",
                     time: "Jun 25, 2026 • 6:00 PM",
-                  },
-    
-                  {
-                    title: "Dinner Reception",
-                    time: "Jun 25, 2026 • 7:00 PM",
-                  },
-    
-                  {
-                    title: "Dance & Celebration",
-                    time: "Jun 25, 2026 • 9:00 PM",
                   },
     
                 ].map((event, index) => (
