@@ -268,6 +268,8 @@ export default function App() {
           px-6 md:px-8
           py-8 md:py-14
           text-center
+          scale-[.92]
+          sm:scale-100
         "
         >
 
