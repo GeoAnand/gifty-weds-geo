@@ -13,11 +13,11 @@ export default function Celebration() {
 
         <Divider/>
 
-        <p className="text-gray-300 mt-8 text-lg">
+        <p className="text-gray-300 mt-8 text-lg font-mono">
           Your presence is the greatest blessing to us.
         </p>
 
-        <p className="text-gray-300 mt-8 text-lg">
+        <p className="text-gray-300 mt-8 text-lg font-mono">
           With hearts full of love and joy, we invite you to celebrate this beautiful beginning with us. Your prayers, laughter, and presence will make our special day even more memorable as we step into a new chapter together.
         </p>
 

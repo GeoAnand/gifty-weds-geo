@@ -31,7 +31,7 @@ export default function WeddingVenue() {
             CSI Church, Edaikode
           </h3>
 
-          <p className="text-gray-400 mt-3">
+          <p className="text-gray-400 mt-3 font-mono">
             Thursday • June 25 • 2026
           </p>
         </div>

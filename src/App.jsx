@@ -290,7 +290,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: .7, duration: 1 }}
             className="
-            text-4xl sm:text-5xl md:text-7xl
+            text-5xl sm:text-6xl md:text-8xl
             md:text-8xl
             font-bold
             gold-text
@@ -317,7 +317,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: .9, duration: 1 }}
             className="
-            text-4xl sm:text-5xl md:text-7xl
+            text-5xl sm:text-6xl md:text-8xl
             md:text-8xl
             font-bold
             gold-text
@@ -335,10 +335,11 @@ export default function App() {
             className="
             mt-10
             text-gray-300
-            text-lg
-            leading-8
+            text-base
+            leading-6
             max-w-xl
             mx-auto
+            font-mono
           "
           >
             Together we and our families invite you to celebrate
@@ -516,11 +517,11 @@ export default function App() {
           className="relative z-10 float-animation"
         >
 
-          <p className="uppercase tracking-[2px] text-sm text-gray-300 mb-8">
+          <p className="uppercase tracking-[2px] text-sm text-gray-300 mb-8 font-mono">
             "So they are no longer two but one flesh. What therefore God has joined together, let not man separate." <br></br><span className="white-heading right-float pt-3">— Matthew 19:6</span>
           </p>
 
-          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold gold-text">
+          <h1 className="text-5xl sm:text-6xl md:text-8xl font-bold gold-text mt-3">
             Gifty
           </h1>
 
@@ -533,16 +534,45 @@ export default function App() {
             Geo
           </h1>
 
-          <p className="mt-10 text-lg tracking-[5px] text-gray-200">
+          <p className="mt-10 text-2xl tracking-[5px] text-gray-200">
             25 • 06 • 2026
           </p>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="luxury-btn mt-10 px-10 py-5 rounded-full text-lg font-semibold"
-          >
-            Save The Date
-          </motion.button>
+         <div className="flex flex-col items-center">
+
+  <span className="tracking-[5px] uppercase text-sm text-[#f5e6b3]"> </span>
+
+  <motion.div
+    animate={{
+      y: [0, 25, 0],
+      opacity: [1, .6, 1],
+    }}
+
+    transition={{
+      duration: 1.8,
+      repeat: Infinity,
+      ease: "easeInOut",
+    }}
+
+    className="mt-16 md:mt-24 text-[#d4af37]"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="60"
+      height="60"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M7 13l5 5 5-5"></path>
+      <path d="M7 6l5 5 5-5"></path>
+    </svg>
+  </motion.div>
+
+</div>
 
         </motion.div>
 
@@ -613,7 +643,7 @@ export default function App() {
       <Celebration />
 
       {/* Footer */}
-      <footer className="py-10 text-center text-gray-500 bg-[#041116]">
+      <footer className="py-10 text-center text-gray-500 bg-[#041116] font-serif ">
         Made with love for Gifty & Geo
       </footer>
     </div>

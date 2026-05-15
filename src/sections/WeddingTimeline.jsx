@@ -59,7 +59,7 @@ export default function WeddingTimeline() {
                         {event.title}
                       </h3>
     
-                      <p className="mt-3 text-gray-300 text-lg tracking-wide">
+                      <p className="mt-3 text-gray-300 text-lg tracking-wide font-mono">
                         {event.time}
                       </p>
     
