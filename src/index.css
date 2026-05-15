@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://googleapis.com');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #06131f;
+  color: white;
+  font-family: "Georgia", serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+  border-radius: 20px;
+}
+
+/* Hero Background */
+.hero-section {
+  background:
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1600");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Premium Gold Text */
+.gold-text {
+  color: #d4af37;
+  font-family: 'Great Vibes', cursive;
+}
+.white-heading{
+  font-family: 'Great Vibes', cursive;
+}
+
+.right-float{
+  float: right;
+}
+/* Luxury Card */
+.glass-card {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212,175,55,.25);
+  box-shadow: 0 0 30px rgba(0,0,0,.4);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float-animation {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Fade Up Animation */
+.fade-up {
+  animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* Elegant Divider */
+.divider {
+  width: 120px;
+  height: 2px;
+  background: #d4af37;
+  margin: 20px auto;
+}
+
+/* Gallery Hover */
+.gallery-image {
+  transition: all .5s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Video Frame */
+.video-frame {
+  border: 1px solid rgba(212,175,55,.4);
+  box-shadow: 0 0 40px rgba(212,175,55,.15);
+}
+
+/* Luxury Button */
+.luxury-btn {
+  background: white;
+  color: black;
+  transition: all .4s ease;
+}
+
+.luxury-btn:hover {
+  background: #d4af37;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(212,175,55,.3);
+}
+
+/* Countdown Box */
+.countdown-box {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(212,175,55,.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Section Spacing */
+.section-padding {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+/* snow fall effect */
+
+/* snow effect */
+.hero-light {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle,
+  rgba(212,175,55,.15),
+  transparent 70%);
+  filter: blur(80px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* snow fall effect */
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,.2),
+      rgba(0,0,0,.55)
+    );
+  pointer-events: none;
+}
+
+/* music */
+.music-glow {
+  animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+
+  0% {
+    box-shadow: 0 0 0 rgba(212,175,55,.2);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(212,175,55,.45);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(212,175,55,.2);
+  }
+}
