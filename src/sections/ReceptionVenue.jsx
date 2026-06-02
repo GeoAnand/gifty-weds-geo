@@ -28,7 +28,7 @@ export default function ReceptionVenue() {
 
         <div className="text-center mt-10">
           <h3 className="text-3xl gold-text">
-            CSI Church, Edaikode
+            CSI Church, Kadamankuzhi - Community Hall
           </h3>
 
           <p className="text-gray-400 mt-3 font-mono">
